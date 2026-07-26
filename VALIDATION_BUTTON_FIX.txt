@@ -1,0 +1,9 @@
+MultiPass 관련 기출 버튼 수정 검수
+
+- 원인: onclick HTML 속성 안에 JSON 문자열의 큰따옴표가 직접 삽입되어 속성이 중간에서 끊김.
+- 수정: startRelatedQuestions(pointId) 함수를 추가하고 버튼에는 숫자 POINT ID만 전달.
+- 동작: POINT별 relatedQuestionIds를 다시 조회해 startSession으로 전달.
+- 서비스워커: 캐시 버전을 multipass-v10-related-quiz-button-fix로 변경.
+- 오프라인 캐시: concept-data.js, concept-study.js를 설치 캐시 목록에 명시적으로 포함.
+- 정적 검사: concept-study.js, app.js, service-worker.js 문법 검사 통과.
+- 데이터 검사: POINT 001 관련 기출 20문항 전달 확인.

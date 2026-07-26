@@ -1,10 +1,12 @@
-const CACHE_NAME = "multipass-pwa-v5-safe-study";
+const CACHE_NAME = "multipass-v10-corrected";
 const APP_FILES = [
   "./",
   "./index.html",
   "./style.css",
   "./app.js",
   "./data.js",
+  "./concept-data.js",
+  "./concept-study.js",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

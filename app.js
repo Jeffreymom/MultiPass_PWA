@@ -9,7 +9,7 @@ const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math
 const statusLabel={current:'현재 범위',supplement:'보조 학습',review:'검토 학습',excluded:'현재 제외'};
 const subjectName=n=>DATA.subjects[n];
 function setNav(view){$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===view))}
-function showView(name){S.view=name;setNav(name);$$('.view').forEach(v=>v.classList.add('hidden'));$('#view-'+name).classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});if(name==='dashboard')renderDashboard();if(name==='exams')renderExams();if(name==='wrong')renderCollection('wrong');if(name==='bookmarks')renderCollection('bookmarks');if(name==='syllabus')renderSyllabus()}
+function showView(name){S.view=name;setNav(name);$$('.view').forEach(v=>v.classList.add('hidden'));$('#view-'+name).classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});if(name==='dashboard')renderDashboard();if(name==='exams')renderExams();if(name==='wrong')renderCollection('wrong');if(name==='bookmarks')renderCollection('bookmarks');if(name==='syllabus')renderSyllabus();if(name==='concept'&&window.renderConceptHome)renderConceptHome()}
 function renderDashboard(){
  const m=DATA.meta, wrong=getLS(LS.wrong,[]), book=getLS(LS.book,[]), hist=getLS(LS.history,[]);
  $('#dashboard-stats').innerHTML=`
