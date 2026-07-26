@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/user/Desktop/깃허브/portfolio-Centum-cha/**)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\user\\Desktop\\깃허브\\portfolio-Centum-cha"
+    ]
+  }
+}
