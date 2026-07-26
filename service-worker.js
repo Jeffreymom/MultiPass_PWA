@@ -1,4 +1,4 @@
-const CACHE_NAME = "multipass-pwa-v4";
+const CACHE_NAME = "multipass-pwa-v5-safe-study";
 const APP_FILES = [
   "./",
   "./index.html",

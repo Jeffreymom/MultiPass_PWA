@@ -30,3 +30,15 @@ button,input,select{font:inherit}.app{min-height:100vh}.topbar{position:sticky;t
   .header-actions{display:flex;margin-top:9px;margin-left:0;overflow:auto}
   #reset-btn{display:none}
 }
+
+/* v5: 학습 해설 + 헷갈린 문제 저장 */
+.answer-title{font-size:18px;font-weight:900;margin-bottom:12px;color:var(--text)}
+.explanation-block{display:grid;gap:8px}
+.explanation-block p{margin:0;line-height:1.65}
+.explanation-block .knowledge-line{padding:12px 14px;border-radius:12px;background:#fff;border:1px solid var(--line);font-weight:700}
+.explain-foot{margin-top:13px;color:var(--muted);font-size:13px;line-height:1.55}
+.uncertain-btn{width:100%;margin-top:15px;border:1px solid #d8ccef;background:white;color:#5e4a8a;border-radius:14px;padding:13px 14px;display:flex;align-items:center;justify-content:center;gap:9px;font-weight:850;cursor:pointer}
+.uncertain-btn:hover{background:#faf7ff;border-color:#a991df}
+.uncertain-btn.active{background:#fff3d9;border-color:#e6b95d;color:#80570d}
+.check-box{width:22px;height:22px;border:2px solid currentColor;border-radius:6px;display:inline-grid;place-items:center;font-size:14px;line-height:1}
+@media(max-width:600px){.answer-title{font-size:17px}.uncertain-btn{font-size:14px;line-height:1.4}}
