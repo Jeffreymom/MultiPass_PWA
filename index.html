@@ -20,7 +20,7 @@
 <header class="topbar"><div class="topbar-inner">
 <div class="brand"><img src="images/차은정파비콘완성.png" alt="MultiPass logo" class="brand-logo">Multi<span>Pass</span></div>
 <nav class="nav">
-<button class="active" data-view="dashboard">홈</button><button data-view="concept" onclick="showConcept()">개념공부</button><button data-view="exams">연도별 기출</button>
+<button class="active" data-view="dashboard">홈</button><button data-view="exams">연도별 기출</button>
 <button data-view="wrong">오답노트</button><button data-view="bookmarks">즐겨찾기</button><button data-view="syllabus">출제기준</button>
 </nav><div class="header-actions"><button id="install-btn" class="icon-btn hidden">앱 설치</button><span id="offline-status" class="offline-status">온라인</span><button id="reset-btn" class="icon-btn">기록 초기화</button></div>
 </div></header>
@@ -32,31 +32,6 @@
 <div id="dashboard-stats" class="grid stats"></div>
 <section class="section"><div class="section-head"><div><h2>과목별 집중학습</h2><p class="muted">과목을 누르면 최신 범위 20문제가 출제됩니다.</p></div><div id="status-summary" class="filters"></div></div><div id="subject-cards" class="grid subject-grid"></div></section>
 <section class="section"><div class="notice"><b>분류 원칙</b><br>공식 2025~2027 출제기준의 세세항목과 직접 연결되는 문제를 우선 학습합니다. DMB, CRT, ActiveX 등 과거 중심 기술은 기본 출제에서 제외하지만 연도별 원문 기출에서는 그대로 확인할 수 있습니다.</div></section>
-</section>
-
-
-<section id="view-concept" class="view hidden">
-  <div id="concept-home">
-    <section class="concept-hero">
-      <div><div class="eyebrow">SUBJECT 01 · FULL CONCEPT STUDY</div><h1>1과목 멀티미디어개론</h1><p>SECTION 9개 · POINT 41개. 사진 속 모든 본문·표·기적의 TIP·개념체크를 원문으로 보존하고, 쉬운 해설·암기카드·비교표·관련 기출·확인 퀴즈·진도 저장을 함께 제공합니다.</p></div>
-    </section>
-    <div id="concept-summary" class="grid stats concept-summary"></div>
-    <div class="section-head"><div><h2>SECTION별 개념공부</h2><p class="muted">SECTION을 누르거나 아래 POINT에서 바로 시작하세요.</p></div><button class="btn btn-outline" onclick="conceptState.section='all';renderConceptHome()">전체 보기</button></div>
-    <div id="concept-sections" class="concept-sections"></div>
-    <div id="concept-point-list" class="concept-point-grid"></div>
-  </div>
-  <div id="concept-detail" class="hidden">
-    <div class="concept-detail-head"><button class="btn btn-outline" onclick="backConcept()">← POINT 목록</button><div id="concept-status-actions" class="concept-status-actions"></div></div>
-    <div id="concept-detail-title" class="concept-detail-title"></div>
-    <div class="concept-tabs">
-      <button class="concept-tab active" data-tab="source" onclick="setConceptTab('source')">원문 전체</button>
-      <button class="concept-tab" data-tab="summary" onclick="setConceptTab('summary')">해설·비교표</button>
-      <button class="concept-tab" data-tab="cards" onclick="setConceptTab('cards')">암기카드</button>
-      <button class="concept-tab" data-tab="quiz" onclick="setConceptTab('quiz')">확인 퀴즈</button>
-      <button class="concept-tab" data-tab="related" onclick="setConceptTab('related')">관련 기출</button>
-    </div>
-    <div id="concept-tab-content"></div>
-  </div>
 </section>
 
 <section id="view-exams" class="view hidden"><div class="section-head"><div><h2>연도별 기출문제</h2><p class="muted">43회분 원문 구성 그대로 80문제를 풉니다.</p></div></div><div class="card table-wrap"><table class="exam-table"><thead><tr><th>시험일</th><th>문항</th><th></th></tr></thead><tbody id="exam-list"></tbody></table></div></section>
@@ -86,8 +61,7 @@
 <div class="footer-copyright">© 2026 Cha Eunjeong. All rights reserved. All works are protected by copyright. Permission is required before copying, modifying, redistributing, or using any part commercially.</div>
 </footer>
 </div>
-<div id="book-modal" class="book-modal hidden"><button onclick="closeBookImage()">×</button><img id="book-modal-img" alt="원문 확대"></div>
-<script src="data.js"></script><script src="concept-data.js"></script><script src="app.js"></script><script src="concept-study.js"></script>
+<script src="data.js"></script><script src="app.js"></script>
 
 <script>
 let deferredInstallPrompt = null;
